@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Cha_Data\Script\ScreenShot.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <None Include="Assets\read me.txt" />
      <None Include="Assets\Cha_Data\Shader\WrapLambert.shader" />
