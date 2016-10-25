@@ -31,6 +31,11 @@ public class CameraController : MonoBehaviour
             isRotating = true;
         }
 
+		if (Input.GetKeyDown (KeyCode.R)) // reset camera when R is pressed
+		{
+			print ("r pressed");
+		}
+
         if(scrollValue != 0)
             isZooming = true;
         
