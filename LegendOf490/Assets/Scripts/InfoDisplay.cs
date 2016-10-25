@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 public class InfoDisplay : MonoBehaviour
 {
 	float deltaTime = 0.0f;
+	private Vector3 camObject;
+
+	void Start()
+	{
+		//camObject = GameObject.FindGameObjectWithTag ("MainCamera").transform.position;
+	}
 
 	void Update()
 	{
@@ -14,6 +21,8 @@ public class InfoDisplay : MonoBehaviour
 	void OnGUI()
 	{
 		int w = Screen.width, h = Screen.height;
+		camObject = GameObject.FindGameObjectWithTag ("MainCamera").transform.position;
+
 
 		// fps info
 		GUIStyle style = new GUIStyle();
@@ -26,13 +35,13 @@ public class InfoDisplay : MonoBehaviour
 		string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
 		GUI.Label(rect, text, style);
 
-		// position info
+		// player position info
 		GUIStyle position = new GUIStyle ();
 		Rect rect2 = new Rect(0,0,w,h*2/100);
 		style.alignment = TextAnchor.UpperRight;
 		style.fontSize = h*2 / 100;
 		style.normal.textColor = new Color (0.0f, 0.0f, 0.5f, 1.0f);
-		string posText = "Player position: " + transform.position.ToString ();
+		string posText = "Player position:\t" + transform.position.ToString () + "\n" + "Camera position:\t" + camObject.ToString () ;
 		GUI.Label (rect2,posText,style);
 
 	}
