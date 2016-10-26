@@ -11,16 +11,29 @@ public class CameraController : MonoBehaviour
     public float zoomSpeed = 4.0f;
 
     private Vector3 mouseOrigin;    // Position of cursor when mouse dragging starts
+    private Vector3 offset;
+    private float xAngle;
+    private float yAngle;
+    private float zAngle;
+    private float wAngle;
     private bool isRotating;    // Is the camera being rotated?
     private bool isZooming;        //are we zooming?
     private float scrollValue;
-    public GameObject target;
-    //
-    // UPDATE
-    //
+    public GameObject target;   //the player
+    void Start()
+    {
+        offset = transform.position - target.transform.position;
+        xAngle = Camera.main.transform.eulerAngles.x;
+        yAngle = Camera.main.transform.eulerAngles.y;
+        zAngle = Camera.main.transform.eulerAngles.z;
+
+
+        print("xAngle " + xAngle + "yAngle " + yAngle + "zAngle " + zAngle);
+    }
 
     void Update()
     {
+    
         scrollValue = Input.GetAxis("Mouse ScrollWheel"); 
 
         // Get the right mouse button
@@ -34,7 +47,13 @@ public class CameraController : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.R)) // reset camera when R is pressed
 		{
 			print ("r pressed");
-		}
+
+            Vector3 desiredPosition = target.transform.position + offset;
+            transform.position = desiredPosition;
+
+            Camera.main.transform.rotation = Quaternion.Euler(xAngle, yAngle, zAngle);
+
+        }
 
         if(scrollValue != 0)
             isZooming = true;
