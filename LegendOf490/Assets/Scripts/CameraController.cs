@@ -40,13 +40,6 @@ public class CameraController : MonoBehaviour
             isRotating = true;
         }
 
-		if (Input.GetKeyDown (KeyCode.R)) // reset camera when R is pressed
-		{
-			print ("r pressed");
-         
-        }
-
- 
         // Rotate camera along X and Y axis
         if (isRotating)
         {
@@ -95,7 +88,7 @@ public class CameraController : MonoBehaviour
         float height = 20.0f;
 
         float heightDamping = 2.0f;
-        float rotationDamping = 3.0f;
+        float rotationDamping = 4.0f;
 
         // Calculate the current rotation angles
         float wantedRotationAngle = target.transform.eulerAngles.y;
@@ -107,7 +100,7 @@ public class CameraController : MonoBehaviour
         currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, rotationDamping * Time.deltaTime);
         // Convert the angle into a rotation
         Quaternion currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
-
+       
         // Damp the height
         currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
 
@@ -119,7 +112,7 @@ public class CameraController : MonoBehaviour
         // Set the height of the camera
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
 
-        // Always look at the target
-        Camera.main.transform.LookAt(target.transform);
+        Camera.main.transform.LookAt(target.transform.GetChild(2));
+
     }
 }
