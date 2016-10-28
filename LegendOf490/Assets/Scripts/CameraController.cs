@@ -88,7 +88,8 @@ public class CameraController : MonoBehaviour
         float height = 20.0f;
 
         float heightDamping = 2.0f;
-        float rotationDamping = 4.0f;
+        float rotationDamping = 2.0f;
+
 
         // Calculate the current rotation angles
         float wantedRotationAngle = target.transform.eulerAngles.y;
