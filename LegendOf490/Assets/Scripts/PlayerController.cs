@@ -16,18 +16,25 @@ public class PlayerController : MonoBehaviour
     public float dashDamping = 2.0f;
     private int dashCount = 0;
     private float dashCooldown = 0f;
+
+	private bool canPause;
     
  
     //this runs once 
     void Start()
     {
+		Application.targetFrameRate = 60;   // set max fps of 60
 		onGround = true;
 		jumpPressure = 0f;
 		minJump = 8f;
 		maxJumpPressure = 10f;
 		rbody = GetComponent<Rigidbody> ();
 
+		canPause = true;
+
+
     }
+		
 
     //this runs every frame
     void Update()
@@ -75,6 +82,23 @@ public class PlayerController : MonoBehaviour
             //play wait animation
 
         }
+
+		// when escape key is pressed
+		if (Input.GetKeyDown (KeyCode.Escape))
+		{
+			// pause
+			if (canPause)
+			{
+				print ("paused");
+				Time.timeScale = 0;
+				canPause = false;
+			}
+			else {	// unpause
+				Time.timeScale = 1;
+				canPause = true;
+			}
+
+		}
 
         //Double tap e to dodge right, and double tap q to dodge left
         if (Input.GetKeyDown(KeyCode.E))
