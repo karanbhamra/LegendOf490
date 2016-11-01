@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour {
     private bool isZooming;        //are we zooming?
     private float scrollValue;
     public GameObject target;   //the player
+	public float cameraDistance = 30f;
 
     void Start() {
      
@@ -75,7 +76,7 @@ public class CameraController : MonoBehaviour {
     }
 
     public void cameraFollowPlayer() {
-        float distance = 15f;
+		float distance = cameraDistance;
         // the height we want the camera to be above the target
         float height = 20.0f;
 
