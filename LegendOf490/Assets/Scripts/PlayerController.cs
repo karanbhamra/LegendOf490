@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     public float forwardSpeed = 12.0f;
     public float turnSpeed = 150.0f;
     public float strafeSpeed = 12.0f;
@@ -21,8 +20,7 @@ public class PlayerController : MonoBehaviour
     
  
     //this runs once 
-    void Start()
-    {
+    void Start() {
 		Application.targetFrameRate = 60;   // set max fps of 60
 		onGround = true;
 		jumpPressure = 0f;
@@ -37,29 +35,23 @@ public class PlayerController : MonoBehaviour
 		
 
     //this runs every frame
-    void Update()
-    {
+    void Update() {
         bool forwardPressed = Input.GetKey(KeyCode.W);
         bool attackPressed = Input.GetMouseButtonDown(0);
     
 
         if (onGround) {
 			// holding space bar
-			if (Input.GetButton ("Jump"))
-			{
-				if (jumpPressure < maxJumpPressure)
-				{
+			if (Input.GetButton ("Jump")) {
+				if (jumpPressure < maxJumpPressure) {
 					jumpPressure += Time.deltaTime * 10f;
 				}
 				else {
 					jumpPressure = maxJumpPressure;
 				}
 				//print (jumpPressure);
-			}
-			else 	// not holding space bar
-			{
-				if (jumpPressure > 0f)
-				{
+			} else {  // not holding space bar
+				if (jumpPressure > 0f) {
 					jumpPressure = jumpPressure + minJump;
 					rbody.velocity = new Vector3 (0f, jumpPressure, 0f);
 					jumpPressure = 0;
@@ -69,30 +61,19 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 
-        if (forwardPressed)
-        {
+        if (forwardPressed) {
             GameObject.Find("Player").GetComponent<Animation>().Play("Walk");
-        }
-        else
-        {
+        } else {
             GameObject.Find("Player").GetComponent<Animation>().Play("Wait");
         }
-        if (attackPressed)
-        { 
-
+        if (attackPressed) { 
                     GameObject.Find("Player").GetComponent<Animation>().Play("Attack");
         }
-        else {
-            //play wait animation
-
-        }
-
+       
 		// when escape key is pressed
-		if (Input.GetKeyDown (KeyCode.Escape))
-		{
+		if (Input.GetKeyDown (KeyCode.Escape)) {
 			// pause
-			if (canPause)
-			{
+			if (canPause) {
 				print ("paused");
 				Time.timeScale = 0;
 				canPause = false;
@@ -101,41 +82,29 @@ public class PlayerController : MonoBehaviour
 				Time.timeScale = 1;
 				canPause = true;
 			}
-
 		}
 
         //Double tap e to dodge right, and double tap q to dodge left
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if(dashCooldown > 0 && dashCount >= 1)
-            {
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if(dashCooldown > 0 && dashCount >= 1) {
                 transform.Translate(dashAmount,0 ,0);
-               
-               
             } else {
                 dashCooldown = 0.5f;
                 dashCount += 1;
             }
-        } else if(Input.GetKeyDown(KeyCode.Q))
-        {
-            if(dashCooldown > 0 && dashCount >= 1)
-            {
+        } else if(Input.GetKeyDown(KeyCode.Q)) {
+            if(dashCooldown > 0 && dashCount >= 1) {
                  transform.Translate(-dashAmount, 0, 0);
-
-                
-            } else
-            {
+            } else {
                 dashCooldown = 0.5f;
                 dashCount += 1;
             }
         }
 
         //Code to handle the reseting of the cooldown on the dash
-        if(dashCooldown > 0)
-        {
+        if(dashCooldown > 0) {
             dashCooldown -= 1 * Time.deltaTime;
-        } else
-        {
+        } else {
             dashCooldown = 0;
         }
 
@@ -148,13 +117,10 @@ public class PlayerController : MonoBehaviour
         transform.Translate(horizontalMovement, 0, forwardMovement);
     }
 
-	void OnCollisionEnter(Collision other)
-	{
-		if (other.gameObject.CompareTag ("ground"))
-		{
+	void OnCollisionEnter(Collision other) {
+		if (other.gameObject.CompareTag ("ground")) {
 			onGround = true;
 		}
 	}
-
 }
 

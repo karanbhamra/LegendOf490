@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraController : MonoBehaviour
-{
+public class CameraController : MonoBehaviour {
 
     public float turnSpeed = 4.0f;      // Speed of camera turning when mouse moves in along an axis
     public float zoomSpeed = 4.0f;
@@ -14,50 +13,47 @@ public class CameraController : MonoBehaviour
     private float scrollValue;
     public GameObject target;   //the player
 
-    void Start()
-    {
+    void Start() {
      
     }
 
-    void Update()
-    {
-        bool forwardPressed = Input.GetKeyDown(KeyCode.W);
+    void Update() {
+        bool forwardPressed = Input.GetKey(KeyCode.W);
         isRotating = Input.GetMouseButton(1);
         scrollValue = Input.GetAxis("Mouse ScrollWheel");
 
+
         if (scrollValue != 0)
             isZooming = true;
-
         // Disable movements on button release
         if (scrollValue == 0)
             isZooming = false;
-        if (!forwardPressed) { 
-        // Get the right mouse button
-        if (Input.GetMouseButtonDown(1))
-        {
-            // Get mouse origin
-            mouseOrigin = Input.mousePosition;
-            isRotating = true;
-        }
 
-        // Rotate camera along X and Y axis
-        if (isRotating)
-        {
-            rotateAroundPlayer();
-        }
-        if (isZooming)
-        {
-            zoomFromPlayer();  
-        }
-        if ((!isRotating && !isZooming))
-        {
+        if (!forwardPressed) {
+            // Get the right mouse button
+            if (Input.GetMouseButtonDown(1)) {
+                // Get mouse origin
+                mouseOrigin = Input.mousePosition;
+                isRotating = true;
+            }
+
+            // Rotate camera along X and Y axis
+            if (isRotating) {
+                rotateAroundPlayer();
+            }
+            if (isZooming) {
+                zoomFromPlayer();
+            }
+        } else {
             cameraFollowPlayer();
         }
-       }
+        if ((!isRotating && !isZooming)) {
+            cameraFollowPlayer();
+        }
+       
     }
 
-    public void rotateAroundPlayer()
-    {
+    public void rotateAroundPlayer() {
         Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
 
         transform.RotateAround(target.transform.position, transform.right, -pos.y * turnSpeed);
@@ -65,24 +61,20 @@ public class CameraController : MonoBehaviour
         
     }
 
-    public void zoomFromPlayer()
-    {
+    public void zoomFromPlayer() {
         Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
 
-        if (scrollValue > 0)
-        {
+        if (scrollValue > 0) {
             Vector3 move = pos.y * zoomSpeed * transform.forward;
             transform.Translate(move, Space.World);
         }
-        else
-        {
+        else {
             Vector3 move = pos.y * zoomSpeed * transform.forward * -1;
             transform.Translate(move, Space.World);
         }
     }
 
-    public void cameraFollowPlayer()
-    {
+    public void cameraFollowPlayer() {
         float distance = 15f;
         // the height we want the camera to be above the target
         float height = 20.0f;
