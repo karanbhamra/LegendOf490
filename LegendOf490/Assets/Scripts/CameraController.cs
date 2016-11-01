@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
         // Disable movements on button release
         if (scrollValue == 0)
             isZooming = false;
-
+        if (!forwardPressed) { 
         // Get the right mouse button
         if (Input.GetMouseButtonDown(1))
         {
@@ -53,7 +53,7 @@ public class CameraController : MonoBehaviour
         {
             cameraFollowPlayer();
         }
-       
+       }
     }
 
     public void rotateAroundPlayer()

@@ -39,11 +39,9 @@ public class PlayerController : MonoBehaviour
     //this runs every frame
     void Update()
     {
-        bool forwardPressed = Input.GetKeyDown(KeyCode.W);
+        bool forwardPressed = Input.GetKey(KeyCode.W);
         bool attackPressed = Input.GetMouseButtonDown(0);
-
-        float currentDash = transform.position.x;
-        float wantedDash = transform.position.x + dashAmount;
+    
 
         if (onGround) {
 			// holding space bar
@@ -74,9 +72,15 @@ public class PlayerController : MonoBehaviour
         if (forwardPressed)
         {
             GameObject.Find("Player").GetComponent<Animation>().Play("Walk");
-        } else if (attackPressed)
+        }
+        else
         {
-            GameObject.Find("Player").GetComponent<Animation>().Play("Attack");
+            GameObject.Find("Player").GetComponent<Animation>().Play("Wait");
+        }
+        if (attackPressed)
+        { 
+
+                    GameObject.Find("Player").GetComponent<Animation>().Play("Attack");
         }
         else {
             //play wait animation
@@ -106,8 +110,8 @@ public class PlayerController : MonoBehaviour
             if(dashCooldown > 0 && dashCount >= 1)
             {
                 transform.Translate(dashAmount,0 ,0);
-                //currentDash = Mathf.Lerp(currentDash, wantedDash, dashDamping * Time.deltaTime);
-                //transform.position = new Vector3(currentDash, transform.position.y, transform.position.z);
+               
+               
             } else {
                 dashCooldown = 0.5f;
                 dashCount += 1;
@@ -116,9 +120,9 @@ public class PlayerController : MonoBehaviour
         {
             if(dashCooldown > 0 && dashCount >= 1)
             {
-                transform.Translate(-dashAmount, 0, 0);
-                //currentDash = Mathf.Lerp(currentDash, -1* wantedDash, dashDamping * Time.deltaTime);
-                //transform.position = new Vector3(currentDash, transform.position.y, transform.position.z);
+                 transform.Translate(-dashAmount, 0, 0);
+
+                
             } else
             {
                 dashCooldown = 0.5f;
