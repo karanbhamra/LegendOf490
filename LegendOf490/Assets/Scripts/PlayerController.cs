@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
     //this runs every frame
     void Update() {
         bool forwardPressed = Input.GetKey(KeyCode.W);
-        bool attackPressed = Input.GetMouseButtonDown(0);
+		bool attackPressed = Input.GetMouseButton(0);
     
 
         if (onGround) {
@@ -63,12 +63,14 @@ public class PlayerController : MonoBehaviour {
 
         if (forwardPressed) {
             GameObject.Find("Player").GetComponent<Animation>().Play("Walk");
-        } else {
+        }
+		else if (attackPressed) { 
+			GameObject.Find("Player").GetComponent<Animation>().Play("Attack");
+		}
+		else {
             GameObject.Find("Player").GetComponent<Animation>().Play("Wait");
         }
-        if (attackPressed) { 
-                    GameObject.Find("Player").GetComponent<Animation>().Play("Attack");
-        }
+        
        
 		// when escape key is pressed
 		if (Input.GetKeyDown (KeyCode.Escape)) {
