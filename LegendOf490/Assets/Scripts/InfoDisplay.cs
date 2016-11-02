@@ -6,10 +6,12 @@ public class InfoDisplay : MonoBehaviour
 {
 	float deltaTime = 0.0f;
 	private Vector3 camObject;
+	private string playerObject;
 
 	void Start()
 	{
 		//camObject = GameObject.FindGameObjectWithTag ("MainCamera").transform.position;
+	
 	}
 
 	void Update()
@@ -22,12 +24,12 @@ public class InfoDisplay : MonoBehaviour
 	{
 		int w = Screen.width, h = Screen.height;
 		camObject = GameObject.FindGameObjectWithTag ("MainCamera").transform.position;
-
+		playerObject = GameObject.FindGameObjectWithTag ("user").transform.position.ToString ();
 
 		// fps info
 		GUIStyle style = new GUIStyle();
 		Rect rect = new Rect(0, 0, w, h * 2 / 100);
-		style.alignment = TextAnchor.UpperLeft;
+		style.alignment = TextAnchor.UpperRight;
 		style.fontSize = h * 2 / 100;
 		style.normal.textColor = new Color (0.0f, 0.0f, 0.5f, 1.0f);
 		float msec = deltaTime * 1000.0f;
@@ -38,12 +40,12 @@ public class InfoDisplay : MonoBehaviour
 		GUI.Label(rect, text, style);
 
 		// player position info
-		GUIStyle position = new GUIStyle ();
+//		GUIStyle position = new GUIStyle ();
 		Rect rect2 = new Rect(0,0,w,h*2/100);
 		style.alignment = TextAnchor.UpperRight;
 		style.fontSize = h*2 / 100;
 		style.normal.textColor = new Color (0.0f, 0.0f, 0.5f, 1.0f);
-		string posText = "Player position:\t" + transform.position.ToString () + "\n" + "Camera position:\t" + camObject.ToString () ;
+		string posText = "\nPlayer position:\t" + playerObject +"\n" + "Camera position:\t" + camObject.ToString () ;
 		GUI.Label (rect2,posText,style);
 
 	}

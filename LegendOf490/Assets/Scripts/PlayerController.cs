@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class PlayerController : MonoBehaviour {
     public float forwardSpeed = 12.0f;
     public float turnSpeed = 150.0f;
     public float strafeSpeed = 12.0f;
-	private float jumpPressure;
-	private float minJump;
-	private float maxJumpPressure;
+	public float jumpHeight;
 	private Rigidbody rbody;
 	private bool onGround;
 
@@ -17,20 +17,18 @@ public class PlayerController : MonoBehaviour {
     private float dashCooldown = 0f;
 
 	private bool canPause;
+	private Slider healthSlider ;
     
  
     //this runs once 
     void Start() {
 		Application.targetFrameRate = 60;   // set max fps of 60
 		onGround = true;
-		jumpPressure = 0f;
-		minJump = 8f;
-		maxJumpPressure = 10f;
+		jumpHeight = 8f;
 		rbody = GetComponent<Rigidbody> ();
+		healthSlider = GameObject.FindGameObjectWithTag("health").GetComponent<Slider>();
 
 		canPause = true;
-
-
     }
 		
 
@@ -38,34 +36,27 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         bool forwardPressed = Input.GetKey(KeyCode.W);
 		bool attackPressed = Input.GetMouseButton(0);
+		bool spacePressed = Input.GetKey (KeyCode.Space);
+		bool backPressed = Input.GetKey (KeyCode.S);
     
 
-        if (onGround) {
-			// holding space bar
-			if (Input.GetButton ("Jump")) {
-				if (jumpPressure < maxJumpPressure) {
-					jumpPressure += Time.deltaTime * 10f;
-				}
-				else {
-					jumpPressure = maxJumpPressure;
-				}
-				//print (jumpPressure);
-			} else {  // not holding space bar
-				if (jumpPressure > 0f) {
-					jumpPressure = jumpPressure + minJump;
-					rbody.velocity = new Vector3 (0f, jumpPressure, 0f);
-					jumpPressure = 0;
-					onGround = false;
-				}
-				
+		if (onGround) {
+			// make char jump when space bar is pressed and char is on ground
+			if (spacePressed) 
+			{
+				rbody.velocity = new Vector3 (0f, jumpHeight, 0f);
+				onGround = false;
 			}
 		}
 
-        if (forwardPressed) {
+		if (forwardPressed || backPressed) {
             GameObject.Find("Player").GetComponent<Animation>().Play("Walk");
+
         }
 		else if (attackPressed) { 
 			GameObject.Find("Player").GetComponent<Animation>().Play("Attack");
+			// showcase attack using mana or getting damaged by changing healthbar value
+			healthSlider.value -= 0.1f;
 		}
 		else {
             GameObject.Find("Player").GetComponent<Animation>().Play("Wait");
