@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 
 	private bool canPause;
 	private Slider healthSlider ;
+	private bool gainHealth;
     
  
     //this runs once 
@@ -29,8 +30,9 @@ public class PlayerController : MonoBehaviour {
 		healthSlider = GameObject.FindGameObjectWithTag("health").GetComponent<Slider>();
 
 		canPause = true;
+
+		gainHealth = false;
     }
-		
 
     //this runs every frame
     void Update() {
@@ -38,6 +40,17 @@ public class PlayerController : MonoBehaviour {
 		bool attackPressed = Input.GetMouseButton(0);
 		bool spacePressed = Input.GetKey (KeyCode.Space);
 		bool backPressed = Input.GetKey (KeyCode.S);
+
+
+		if (gainHealth && healthSlider.value < 100)
+		{
+			healthSlider.value += 0.25f;
+			gainHealth = true;
+
+		}
+		else {
+			gainHealth = false;
+		}
     
 
 		if (onGround) {
@@ -56,7 +69,7 @@ public class PlayerController : MonoBehaviour {
 		else if (attackPressed) { 
 			GameObject.Find("Player").GetComponent<Animation>().Play("Attack");
 			// showcase attack using mana or getting damaged by changing healthbar value
-			healthSlider.value -= 0.1f;
+			//healthSlider.value -= 0.1f;
 		}
 		else {
             GameObject.Find("Player").GetComponent<Animation>().Play("Wait");
@@ -113,6 +126,27 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter(Collision other) {
 		if (other.gameObject.CompareTag ("ground")) {
 			onGround = true;
+		}
+		if (other.gameObject.tag == "enemy")
+		{
+			healthSlider.value -= 1.0f;
+			gainHealth = false;
+		}
+	}
+
+	void OnCollisionStay(Collision other) {
+		if (other.gameObject.tag == "enemy")
+		{
+			healthSlider.value -= 1.0f;
+			gainHealth = false;
+		}	
+	}
+
+	void OnCollisionExit(Collision other) {
+		if (other.gameObject.tag == "enemy")
+		{
+			healthSlider.value -= 1.0f;
+			gainHealth = true;
 		}
 	}
 }
