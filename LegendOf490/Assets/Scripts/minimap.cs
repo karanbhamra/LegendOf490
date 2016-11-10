@@ -2,21 +2,21 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class minimap : MonoBehaviour {
+public class MiniMap : MonoBehaviour {
 
+	// target will be the user selected in the inspector panel
 	public GameObject target = null;
+	// camheight is how high the camera is looking down from
 	public float camHeight = 200.0f;
-	//Vector3 pos;
 
 	// Use this for initialization
 	void Start () {
-		//pos = Vector3.zero;
 
 	}
 
 	// Update is called once per frame
 	void Update () {
-		//pos = target.transform.position;
+		// follow player on the x and z pos with a static height, no rotations
 		transform.position = new Vector3 (target.transform.position.x, camHeight, target.transform.position.z);
 
 

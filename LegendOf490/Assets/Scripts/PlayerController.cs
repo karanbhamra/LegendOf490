@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour {
     private int dashCount = 0;
     private float dashCooldown = 0f;
 
-	private bool canPause;
 	private Slider healthSlider ;
 	private bool gainHealth;
     
@@ -29,7 +28,6 @@ public class PlayerController : MonoBehaviour {
 		rbody = GetComponent<Rigidbody> ();
 		healthSlider = GameObject.FindGameObjectWithTag("health").GetComponent<Slider>();
 
-		canPause = true;
 
 		gainHealth = false;
     }
@@ -74,21 +72,6 @@ public class PlayerController : MonoBehaviour {
 		else {
             GameObject.Find("Player").GetComponent<Animation>().Play("Wait");
         }
-        
-       
-		// when escape key is pressed
-		if (Input.GetKeyDown (KeyCode.Escape)) {
-			// pause
-			if (canPause) {
-				print ("paused");
-				Time.timeScale = 0;
-				canPause = false;
-			}
-			else {	// unpause
-				Time.timeScale = 1;
-				canPause = true;
-			}
-		}
 
         //Double tap e to dodge right, and double tap q to dodge left
         if (Input.GetKeyDown(KeyCode.E)) {
