@@ -106,7 +106,7 @@ public class CameraController : MonoBehaviour {
         // Set the height of the camera
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
 
-        Camera.main.transform.LookAt(target.transform.GetChild(1));
+        Camera.main.transform.LookAt(target.transform.GetChild(0));
 
     }
 }
