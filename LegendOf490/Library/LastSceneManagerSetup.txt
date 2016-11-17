@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Prologue -Village.unity
-=======
-- path: Assets/Scenes/DefaultScene.unity
->>>>>>> 1b860ecd77b24731c91d96976bcdfc3cfcbacea0
   isLoaded: 1
   isActive: 1
