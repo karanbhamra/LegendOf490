@@ -23,7 +23,7 @@ ExportedObj/
 *.booproj
 *.svd
 
-
+/LegendOf490/LegendOf490/Library/metadata
 # Unity3D generated meta files
 *.pidb.meta
 
