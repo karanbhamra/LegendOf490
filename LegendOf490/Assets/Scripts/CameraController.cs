@@ -15,11 +15,11 @@ public class CameraController : MonoBehaviour {
 	public float cameraDistance = 30f;
 
     void Start() {
+		target = GameObject.FindGameObjectWithTag ("user");
      
     }
 
     void Update() {
-		target = GameObject.FindGameObjectWithTag ("user");
         bool forwardPressed = Input.GetKey(KeyCode.W);
         isRotating = Input.GetMouseButton(1);
         scrollValue = Input.GetAxis("Mouse ScrollWheel");

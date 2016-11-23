@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MiniMap : MonoBehaviour
+public class minimap: MonoBehaviour
 {
 
     // target will be the user selected in the inspector panel
@@ -12,6 +12,7 @@ public class MiniMap : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		target = GameObject.FindGameObjectWithTag ("user");
        
 
     }
