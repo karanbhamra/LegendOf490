@@ -2,29 +2,30 @@
 using System.Collections;
 
 public class MainMenuChase : MonoBehaviour {
-    public float min;
-    public float max;
+    private float min;
+    private float max;
 
     public Transform rightTarget;
     public Transform leftTarget;
     // Use this for initialization
     void Start () {
         min = transform.position.x;
-        max = transform.position.x + 80;
+        max = transform.position.x + 100;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if(transform.position.x == max)
+      
+        if (transform.position.x >90)
         {
             transform.LookAt(leftTarget);
         } 
-        if(transform.position.x == min)
+        if(transform.position.x < 10)
         {
             transform.LookAt(rightTarget);
         }
-        transform.position = new Vector3(Mathf.PingPong(Time.time * 20, max - min) + min, transform.position.y, transform.position.z);
-       
+
+        transform.position = new Vector3(Mathf.PingPong(Time.time * 10, max-min), transform.position.y, transform.position.z);
 
     }
 }
