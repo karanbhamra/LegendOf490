@@ -19,11 +19,13 @@ public class PlayerController : MonoBehaviour {
   private bool canPause;
   private Slider healthSlider;
   private bool gainHealth;
+  EnemyStats enemyStatsScript = new EnemyStats();
 
-  public EnemyStats enemyStatsScript;
 
-  //this runs once 
-  void Start() {
+    //this runs once 
+    void Start() {
+
+
     Application.targetFrameRate = 60;   // set max fps of 60
     onGround = true;
     jumpHeight = 8f;
