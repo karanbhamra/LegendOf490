@@ -12,8 +12,8 @@ public class minimap: MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		target = GameObject.FindGameObjectWithTag ("user");
-       
+        //target = GameObject.FindGameObjectWithTag ("user");
+        transform.position = new Vector3(target.transform.position.x, camHeight, target.transform.position.z);
 
     }
 

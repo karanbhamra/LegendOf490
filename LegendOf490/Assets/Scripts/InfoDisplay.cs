@@ -9,7 +9,7 @@ public class InfoDisplay : MonoBehaviour
 
 	void Start()
 	{
-		//camObject = GameObject.FindGameObjectWithTag ("MainCamera").transform.position;
+		camObject = GameObject.FindGameObjectWithTag ("MainCamera").transform.position;
 	
 	}
 
@@ -22,8 +22,8 @@ public class InfoDisplay : MonoBehaviour
 	void OnGUI()
 	{
 		int w = Screen.width, h = Screen.height;
-		camObject = GameObject.FindGameObjectWithTag ("MainCamera").transform.position;
-		playerObject = GameObject.FindGameObjectWithTag ("user").transform.position.ToString ();
+		camObject = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
+		playerObject = GameObject.FindGameObjectWithTag("user").transform.position.ToString ();
 
 		// fps info
 		GUIStyle style = new GUIStyle();
