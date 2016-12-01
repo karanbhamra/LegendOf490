@@ -24,6 +24,7 @@ public class PlayerController2D : MonoBehaviour {
     bool rightPressed;
     bool leftPressed ;
     bool attackPressed;
+    KeyCode currentStroke = KeyCode.UpArrow;
 
 
     //this runs once 
@@ -124,6 +125,11 @@ public class PlayerController2D : MonoBehaviour {
         //Double tap e to dodge right, and double tap q to dodge left
         if (Input.GetKeyDown(KeyCode.D))
         {
+            if(currentStroke != KeyCode.D)
+            {
+                currentStroke = KeyCode.D;
+                dashCount = 0;
+            }
             if (dashCooldown > 0 && dashCount >= 1)
             {
                 transform.position = new Vector3(transform.position.x + dashAmount, transform.position.y, transform.position.z);
@@ -136,6 +142,11 @@ public class PlayerController2D : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
+            if (currentStroke != KeyCode.A)
+            {
+                currentStroke = KeyCode.A;
+                dashCount = 0;
+            }
             if (dashCooldown > 0 && dashCount >= 1)
             {
                 transform.position = new Vector3(transform.position.x - dashAmount, transform.position.y, transform.position.z);
@@ -148,6 +159,11 @@ public class PlayerController2D : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
+            if (currentStroke != KeyCode.S)
+            {
+                currentStroke = KeyCode.S;
+                dashCount = 0;
+            }
             if (dashCooldown > 0 && dashCount >= 1)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - dashAmount);
@@ -160,6 +176,11 @@ public class PlayerController2D : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
+            if (currentStroke != KeyCode.W)
+            {
+                currentStroke = KeyCode.W;
+                dashCount = 0;
+            }
             if (dashCooldown > 0 && dashCount >= 1)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + dashAmount);
