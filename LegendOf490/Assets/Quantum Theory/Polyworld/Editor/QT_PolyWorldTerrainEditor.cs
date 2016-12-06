@@ -371,7 +371,7 @@ public class QT_PolyWorldTerrainEditor : Editor {
                 {
                     if(tImporter.isReadable==false)
                     { 
-                        tImporter.textureType = TextureImporterType.Advanced;
+                        tImporter.textureType = TextureImporterType.Default;
 
                         tImporter.isReadable = isReadable;
 

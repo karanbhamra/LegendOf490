@@ -417,7 +417,7 @@ public class QT_ConvertMesh : EditorWindow
             * */
             if(recalcLMUVs)
                 Unwrapping.GenerateSecondaryUVSet(newVCMesh);
-            newVCMesh.Optimize();
+            ;
             newVCMesh.RecalculateNormals(); //recalc normals breaks normals along uv seams.. 
 
             //remove bad mesh characters here and add suffix
