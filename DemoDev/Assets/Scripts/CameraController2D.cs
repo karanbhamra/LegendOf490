@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraController2D : MonoBehaviour {
     public Transform target;            // The position that that camera will be following.
-    public float smoothing = 5f;        // The speed with which the camera will be following.
+    public float smoothing = 5.0f;        // The speed with which the camera will be following.
 
     Vector3 offset;                     // The initial offset from the target.
 
