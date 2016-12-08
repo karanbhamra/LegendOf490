@@ -87,8 +87,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BaseCharacter.cs" />
     <Compile Include="Assets\Scripts\CameraController2D.cs" />
     <Compile Include="Assets\Scripts\EnemyStats.cs" />
+    <Compile Include="Assets\Scripts\GameMaster.cs" />
     <Compile Include="Assets\Scripts\InfoDisplay.cs" />
     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
     <Compile Include="Assets\Scripts\MainMenuChase.cs" />
