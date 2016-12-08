@@ -9,10 +9,11 @@ public class enemyAI : MonoBehaviour {
   public float enemyMovementSpeed;
   public float damping;
   public Transform target;
+  public EnemyStats stats;
 
   // Use this for initialization
   void Start () {
-
+    stats = GetComponent<EnemyStats>();
 	}
 	
 	// Update is called once per frame
@@ -20,11 +21,14 @@ public class enemyAI : MonoBehaviour {
     targetDistance = Vector3.Distance(target.position, transform.position);
     if (targetDistance < enemyLookDistance) {
       lookAtPlayer();
-      print("look at player");
+      //print("look at player");
     }
     if(targetDistance < attackDistance) {
       attackPlayer();
-      print("attack player");
+     // print("attack player");
+    }
+    if(stats.curHp <= 0) {
+      DestroyObject(this);
     }
 	}
 

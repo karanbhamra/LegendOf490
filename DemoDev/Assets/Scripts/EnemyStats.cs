@@ -7,8 +7,8 @@ public class EnemyStats : MonoBehaviour {
 
   // Use this for initialization
   void Start() {
-    curHp = 1000;
-    maxHp = 1000;
+    curHp = 100;
+    maxHp = 100;
   }
 
   // Update is called once per frame

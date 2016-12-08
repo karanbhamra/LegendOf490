@@ -5,11 +5,13 @@ public class CharacterController : MonoBehaviour {
 
   public Animator animator;
   private Vector3 moveDirection;
+  public GameObject enemy;
 
   public float speed = 0.0f;
   public float h = 0.0f;
   public float v = 0.0f;
   public float tiltAngleY;
+  public float damage = 50.0f;
 
   bool upPressed;
   bool downPressed;
@@ -63,11 +65,24 @@ public class CharacterController : MonoBehaviour {
     }
     if(attackPressed = Input.GetMouseButton(0)) {
       speed -= 0.1f;
+      if (GameObject.FindWithTag("enemy") != null) {
+        float distance = Vector3.Distance(GameObject.FindWithTag("Player").transform.position, GameObject.FindWithTag("enemy").transform.position);
+        Vector3 targetDir = GameObject.FindWithTag("enemy").transform.position - GameObject.FindWithTag("Player").transform.position;
+        Vector3 forward = GameObject.FindWithTag("Player").transform.forward;
+        float angle = Vector3.Angle(targetDir, forward);
+        if (distance < 40.0 && angle < 60.0) {
+          Attack(damage);
+        }
+        // showcase attack using mana or getting damaged by changing healthbar value
+        //healthSlider.value -= 0.1f;
+      }
     }
 
     // The Inputs are defined in the Input Manager
-    if(h != 0.0f || v != 0.0f && speed < 35.0f) {
+    if(h != 0.0f || v != 0.0f) {
       speed += 0.2f;
+    }else {
+      speed = 0.0f;
     }
 
     transform.rotation = Quaternion.Euler(0.0f, tiltAngleY, 0.0f);
@@ -81,5 +96,10 @@ public class CharacterController : MonoBehaviour {
     h = 0.0f;
     v = 0.0f;
   }
-
+  void Attack(float damage) {
+    enemy = GameObject.FindWithTag("enemy");
+    EnemyStats stats = enemy.GetComponent<EnemyStats>();
+    //stats.ReceiveDamage(damage);
+    DestroyObject(enemy);
+  }
 }
