@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BaseCharacter.cs" />
     <Compile Include="Assets\Scripts\CameraController2D.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
     <Compile Include="Assets\Scripts\EnemyStats.cs" />
@@ -97,8 +98,15 @@
     <Compile Include="Assets\Scripts\InfoDisplay.cs" />
     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
     <Compile Include="Assets\Scripts\MainMenuChase.cs" />
+    <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\NPC_Agent.cs" />
+    <Compile Include="Assets\Scripts\NPC_Movement.cs" />
+    <Compile Include="Assets\Scripts\NPC_Sight.cs" />
+    <Compile Include="Assets\Scripts\PC.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\PlayerAgent.cs" />
     <Compile Include="Assets\Scripts\PlayerController2D.cs" />
+    <Compile Include="Assets\Scripts\StartPosition.cs" />
     <Compile Include="Assets\Scripts\enemyAI.cs" />
   </ItemGroup>
   <ItemGroup>

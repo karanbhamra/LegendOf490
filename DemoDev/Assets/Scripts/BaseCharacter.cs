@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseCharacter : MonoBehaviour {
+  [SerializeField]
   private string name;
+  [SerializeField]
   private string description;
+  [SerializeField]
   private float health;
+  [SerializeField]
   private float stamina;
 
   public string NAME {

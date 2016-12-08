@@ -23,7 +23,7 @@ public class InfoDisplay : MonoBehaviour
 	{
 		int w = Screen.width, h = Screen.height;
 		camObject = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
-		playerObject = GameObject.FindGameObjectWithTag("user").transform.position.ToString ();
+		playerObject = GameObject.FindGameObjectWithTag("Player").transform.position.ToString ();
 
 		// fps info
 		GUIStyle style = new GUIStyle();
