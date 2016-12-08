@@ -12,15 +12,12 @@ public class PlayerAgent : MonoBehaviour
   void Awake()
   {
     PC tmp = new PC();
-    tmp.TAG = this.transform.gameObject.tag;
-    tmp.characterGO = this.transform.gameObject;
+    //tmp.TAG = this.transform.gameObject.tag;
+    //tmp.characterGO = this.transform.gameObject;
     tmp.NAME = "Player";
     tmp.HEALTH = 100.0f;
-    tmp.DEFENSE = 50.0f;
+    tmp.STAMINA = 100.0f;
     tmp.DESCRIPTION = "Main Character";
-    tmp.DEXTERITY = 33.0f;
-    tmp.INTELLIGENCE = 80.0f;
-    tmp.STRENGTH = 60.0f;
 
     this.playerCharacterData = tmp;
   }
@@ -38,7 +35,7 @@ public class PlayerAgent : MonoBehaviour
     {
       this.playerCharacterData.HEALTH = 0.0f;
 
-      this.transform.GetComponent<CharacterController>().die = true;
+      //this.transform.GetComponent<CharacterController>().die = true;
     }
   }
 }

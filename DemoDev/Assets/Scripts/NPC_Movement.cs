@@ -84,14 +84,14 @@ public class NPC_Movement : MonoBehaviour
           Quaternion.LookRotation(direction), 0.1f);
     }
 
-    if (this.player.transform.GetComponent<CharacterController>().die || this.die)
-    {
-      animator.SetBool("Attack", false);
-      animator.SetFloat("Speed", 0.0f);
-      animator.SetFloat("AngularSpeed", 0.0f);
-    }
+    //if (this.player.transform.GetComponent<CharacterController>().die || this.die)
+    //{
+    //  animator.SetBool("Attack", false);
+    //  animator.SetFloat("Speed", 0.0f);
+    //  animator.SetFloat("AngularSpeed", 0.0f);
+    //}
 
-    animator.SetBool("Die", die);
+    //animator.SetBool("Die", die);
   }
 
   // let's update our scene using fixed update
@@ -117,7 +117,7 @@ public class NPC_Movement : MonoBehaviour
       if (animator.GetFloat("Attack1C") == 1.0f)
       {
         NPC npc = this.gameObject.GetComponent<NPC_Agent>().npcData;
-        float impact = (npc.STRENGTH + npc.HEALTH) / 100.0f;
+        float impact = (npc.HEALTH) / 100.0f;
         GameMaster.instance.EnemyAttackPlayer(impact);
       }
     }

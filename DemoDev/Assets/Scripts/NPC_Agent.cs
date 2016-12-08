@@ -46,15 +46,13 @@ public class NPC_Agent : MonoBehaviour
     this.canvasNPCStats.GetComponent<NPCStatUI>().imgManaBar.fillAmount = 1f;
 
     NPC tmp = new NPC();
-    tmp.TAG = "ENEMY";
-    tmp.characterGO = this.transform.gameObject;
+    //tmp.TAG = "ENEMY";
+    //tmp.characterGO = this.transform.gameObject;
     tmp.NAME = "B1";
     tmp.HEALTH = 100.0f;
-    tmp.DEFENSE = 50.0f;
+    tmp.STAMINA = 100.0f;
     tmp.DESCRIPTION = "Bees";
-    tmp.DEXTERITY = 33.0f;
-    tmp.INTELLIGENCE = 80.0f;
-    tmp.STRENGTH = 60.0f;
+
 
 
     this.npcData = tmp;

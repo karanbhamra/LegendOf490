@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NavMeshMovePlayer : MonoBehaviour {
 
-   public NavMeshAgent navMeshAgent;
+   public UnityEngine.AI.NavMeshAgent navMeshAgent;
    public Animator myAnimator;
 
    public Vector3 movePosition;
@@ -16,7 +16,7 @@ public class NavMeshMovePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-      this.navMeshAgent = GetComponent<NavMeshAgent>();
+      this.navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
       this.myAnimator = GetComponent<Animator>();
 
       this.myAudioSource = GetComponent<AudioSource>();
