@@ -118,8 +118,7 @@ public class PC : BaseCharacter
 
   [SerializeField]
   private InventoryItem selectedArmour;
-  public InventoryItem SELECTED_ARMOUR
-  {
+  public InventoryItem SELECTED_ARMOUR {
     get { return this.selectedArmour; }
     set { this.selectedArmour = value; }
   }

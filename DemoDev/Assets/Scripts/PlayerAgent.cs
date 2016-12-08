@@ -14,10 +14,10 @@ public class PlayerAgent : MonoBehaviour
     PC tmp = new PC();
     tmp.TAG = this.transform.gameObject.tag;
     tmp.characterGO = this.transform.gameObject;
-    tmp.NAME = "Maximilian";
+    tmp.NAME = "Player";
     tmp.HEALTH = 100.0f;
     tmp.DEFENSE = 50.0f;
-    tmp.DESCRIPTION = "Our Hero";
+    tmp.DESCRIPTION = "Main Character";
     tmp.DEXTERITY = 33.0f;
     tmp.INTELLIGENCE = 80.0f;
     tmp.STRENGTH = 60.0f;

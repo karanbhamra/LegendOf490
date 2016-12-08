@@ -51,7 +51,7 @@ public class NPC_Agent : MonoBehaviour
     tmp.NAME = "B1";
     tmp.HEALTH = 100.0f;
     tmp.DEFENSE = 50.0f;
-    tmp.DESCRIPTION = "The Beast";
+    tmp.DESCRIPTION = "Bees";
     tmp.DEXTERITY = 33.0f;
     tmp.INTELLIGENCE = 80.0f;
     tmp.STRENGTH = 60.0f;
