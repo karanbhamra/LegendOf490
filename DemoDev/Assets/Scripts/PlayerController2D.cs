@@ -18,13 +18,13 @@ public class PlayerController2D : MonoBehaviour {
     private bool canPause;
     private Slider healthSlider;
     private bool gainHealth;
-	EnemyStats enemyStatsScript;
+	  EnemyStats enemyStatsScript;
     bool upPressed;
     bool downPressed;
     bool rightPressed;
     bool leftPressed ;
     bool attackPressed;
-	KeyCode currentStroke;
+	  KeyCode currentStroke;
 
 
     //this runs once 
