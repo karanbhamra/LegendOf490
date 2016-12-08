@@ -27,7 +27,13 @@ public class PlayerAgent : MonoBehaviour
   {
 
   }
-
+  void OnCollisionStay(Collision collision) {
+    foreach (ContactPoint contact in collision.contacts) {
+      if(contact.otherCollider.tag == "enemy") {
+        playerCharacterData.HEALTH -= 5.0f;
+      }
+    } 
+  }
   // Update is called once per frame
   void Update()
   {
@@ -35,7 +41,7 @@ public class PlayerAgent : MonoBehaviour
     {
       this.playerCharacterData.HEALTH = 0.0f;
 
-      //this.transform.GetComponent<CharacterController>().die = true;
+      this.transform.GetComponent<CharacterController>().die = true;
     }
   }
 }

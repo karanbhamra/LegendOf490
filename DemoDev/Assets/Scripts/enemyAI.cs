@@ -9,22 +9,14 @@ public class enemyAI : MonoBehaviour {
   public float enemyMovementSpeed;
   public float damping;
   public Transform target;
-  private Rigidbody theRigidBody;
-  //Renderer myRenderer;
-
 
   // Use this for initialization
   void Start () {
-   // myRenderer.GetComponent<Renderer>();
-    theRigidBody = GetComponent<Rigidbody>();
-    if(theRigidBody != null){
-      print("rigid body not null");
-    }
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
     targetDistance = Vector3.Distance(target.position, transform.position);
     if (targetDistance < enemyLookDistance) {
       lookAtPlayer();
@@ -33,8 +25,6 @@ public class enemyAI : MonoBehaviour {
     if(targetDistance < attackDistance) {
       attackPlayer();
       print("attack player");
-    } else {
-      //myRenderer
     }
 	}
 
@@ -44,6 +34,6 @@ public class enemyAI : MonoBehaviour {
   }
 
   void attackPlayer() {
-    theRigidBody.AddForce(transform.forward * enemyMovementSpeed);
+    transform.position = Vector3.MoveTowards(transform.position, target.position, enemyMovementSpeed * Time.deltaTime);
   }
 }
