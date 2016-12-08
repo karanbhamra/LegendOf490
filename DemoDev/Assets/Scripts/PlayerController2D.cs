@@ -33,6 +33,7 @@ public class PlayerController2D : MonoBehaviour {
 		currentStroke = KeyCode.UpArrow;
 
         Application.targetFrameRate = 60;   // set max fps of 60
+		QualitySettings.antiAliasing = 4;	// antialiasing multisampling set to 4x
     
         rbody = GetComponent<Rigidbody>();
         healthSlider = GameObject.FindGameObjectWithTag("HealthUI").GetComponent<Slider>();
@@ -51,16 +52,16 @@ public class PlayerController2D : MonoBehaviour {
         leftPressed = Input.GetKey(KeyCode.A);
         attackPressed = Input.GetMouseButton(0);
  
-        if (gainHealth && healthSlider.value < 100)
-        {
-            healthSlider.value += 0.25f;
-            gainHealth = true;
-
-        }
-        else
-        {
-            gainHealth = false;
-        }
+//        if (gainHealth && healthSlider.value < 100)
+//        {
+//            healthSlider.value += 0.25f;
+//            gainHealth = true;
+//
+//        }
+//        else
+//        {
+//            gainHealth = false;
+//        }
 
         if (upPressed || downPressed || rightPressed || leftPressed)
         {
@@ -210,32 +211,32 @@ public class PlayerController2D : MonoBehaviour {
         enemyStatsScript = GameObject.Find("Slime").GetComponent<EnemyStats>();
         enemyStatsScript.ReceiveDamage(10);
     }
-
-    void OnCollisionEnter(Collision other)
-    {
-      
-        if (other.gameObject.tag == "enemy")
-        {
-            healthSlider.value -= 1.0f;
-            gainHealth = false;
-        }
-    }
-
-    void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject.tag == "enemy")
-        {
-            healthSlider.value -= 1.0f;
-            gainHealth = false;
-        }
-    }
-
-    void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.tag == "enemy")
-        {
-            healthSlider.value -= 1.0f;
-            gainHealth = true;
-        }
-    }
+//
+//    void OnCollisionEnter(Collision other)
+//    {
+//      
+//        if (other.gameObject.tag == "enemy")
+//        {
+//            healthSlider.value -= 1.0f;
+//            gainHealth = false;
+//        }
+//    }
+//
+//    void OnCollisionStay(Collision other)
+//    {
+//        if (other.gameObject.tag == "enemy")
+//        {
+//            healthSlider.value -= 1.0f;
+//            gainHealth = false;
+//        }
+//    }
+//
+//    void OnCollisionExit(Collision other)
+//    {
+//        if (other.gameObject.tag == "enemy")
+//        {
+//            healthSlider.value -= 1.0f;
+//            gainHealth = true;
+//        }
+//    }
 }
