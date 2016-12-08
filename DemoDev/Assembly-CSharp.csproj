@@ -54,7 +54,11 @@
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController2D.cs" />
      <Compile Include="Assets\Scripts\enemyAI.cs" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\RenderBehind.shader" />
      <None Include="Assets\Cha_Data\Shader\WrapLambert.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-GUI.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-DiffuseMod.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-Tinted.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
