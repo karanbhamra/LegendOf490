@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class CameraController2D : MonoBehaviour {
     public Transform target;            // The position that that camera will be following.
@@ -12,6 +11,7 @@ public class CameraController2D : MonoBehaviour {
         // Calculate the initial offset.
         offset = transform.position - target.position;
         transform.LookAt(target);
+
     }
 
     void FixedUpdate()
