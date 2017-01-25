@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Main Menu.unity
+- path: Assets/Scenes/Prologue - Beekeepers_House.unity
   isLoaded: 1
   isActive: 1

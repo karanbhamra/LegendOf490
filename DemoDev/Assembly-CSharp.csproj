@@ -1,20 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <LangVersion>4</LangVersion>
-  </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{0375FA38-8A71-8A72-0888-45BB31ABC994}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -50,73 +46,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ActiveInventoryItemUI.cs" />
-    <Compile Include="Assets\Scripts\ActiveSpecialItemUI.cs" />
-    <Compile Include="Assets\Scripts\AudioController.cs" />
-    <Compile Include="Assets\Scripts\BaseCharacter.cs" />
-    <Compile Include="Assets\Scripts\BaseItem.cs" />
-    <Compile Include="Assets\Scripts\CameraController2D.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\CharacterController.cs" />
-    <Compile Include="Assets\Scripts\CharacterCustomization.cs" />
-    <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
-    <Compile Include="Assets\Scripts\EnemyStats.cs" />
-    <Compile Include="Assets\Scripts\GameLoader.cs" />
-    <Compile Include="Assets\Scripts\GameMaster.cs" />
-    <Compile Include="Assets\Scripts\HUDElementsUI.cs" />
-    <Compile Include="Assets\Scripts\IKHandle.cs" />
-    <Compile Include="Assets\Scripts\InfoDisplay.cs" />
-    <Compile Include="Assets\Scripts\InventoryItem.cs" />
-    <Compile Include="Assets\Scripts\InventoryItemAgent.cs" />
-    <Compile Include="Assets\Scripts\InventoryItemUI.cs" />
-    <Compile Include="Assets\Scripts\InventorySystem.cs" />
-    <Compile Include="Assets\Scripts\LevelController.cs" />
-    <Compile Include="Assets\Scripts\LoadOnClick.cs" />
-    <Compile Include="Assets\Scripts\MainMenuChase.cs" />
-    <Compile Include="Assets\Scripts\NPC.cs" />
-    <Compile Include="Assets\Scripts\NPCStatUI.cs" />
-    <Compile Include="Assets\Scripts\NPC_Agent.cs" />
-    <Compile Include="Assets\Scripts\NPC_Movement.cs" />
-    <Compile Include="Assets\Scripts\NPC_Sight.cs" />
-    <Compile Include="Assets\Scripts\NavMeshMovePlayer.cs" />
-    <Compile Include="Assets\Scripts\PC.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\PlayerAgent.cs" />
-    <Compile Include="Assets\Scripts\PlayerController2D.cs" />
-    <Compile Include="Assets\Scripts\RotateMe.cs" />
-    <Compile Include="Assets\Scripts\SmoothFollow.cs" />
-    <Compile Include="Assets\Scripts\StartPosition.cs" />
-    <Compile Include="Assets\Scripts\UIController.cs" />
-    <Compile Include="Assets\Scripts\enemyAI.cs" />
-    <None Include="Assets\Pokemon Assets\Materials\Shaders\RenderBehind.shader" />
-    <None Include="Assets\Cha_Data\Shader\WrapLambert.shader" />
-    <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-GUI.shader" />
-    <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-DiffuseMod.shader" />
-    <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-Tinted.shader" />
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PlaymodeTestsRunner">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VR">
-      <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\Scripts\ActiveInventoryItemUI.cs" />
+     <Compile Include="Assets\Scripts\ActiveSpecialItemUI.cs" />
+     <Compile Include="Assets\Scripts\AudioController.cs" />
+     <Compile Include="Assets\Scripts\BaseCharacter.cs" />
+     <Compile Include="Assets\Scripts\BaseItem.cs" />
+     <Compile Include="Assets\Scripts\CameraController2D.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\CharacterCustomization.cs" />
+     <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
+     <Compile Include="Assets\Scripts\EnemyStats.cs" />
+     <Compile Include="Assets\Scripts\GameLoader.cs" />
+     <Compile Include="Assets\Scripts\GameMaster.cs" />
+     <Compile Include="Assets\Scripts\HUDElementsUI.cs" />
+     <Compile Include="Assets\Scripts\IKHandle.cs" />
+     <Compile Include="Assets\Scripts\InfoDisplay.cs" />
+     <Compile Include="Assets\Scripts\InventoryItem.cs" />
+     <Compile Include="Assets\Scripts\InventoryItemAgent.cs" />
+     <Compile Include="Assets\Scripts\InventoryItemUI.cs" />
+     <Compile Include="Assets\Scripts\InventorySystem.cs" />
+     <Compile Include="Assets\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MainMenuChase.cs" />
+     <Compile Include="Assets\Scripts\NPC.cs" />
+     <Compile Include="Assets\Scripts\NPCStatUI.cs" />
+     <Compile Include="Assets\Scripts\NPC_Agent.cs" />
+     <Compile Include="Assets\Scripts\NPC_Movement.cs" />
+     <Compile Include="Assets\Scripts\NPC_Sight.cs" />
+     <Compile Include="Assets\Scripts\NavMeshMovePlayer.cs" />
+     <Compile Include="Assets\Scripts\PC.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PlayerAgent.cs" />
+     <Compile Include="Assets\Scripts\PlayerController2D.cs" />
+     <Compile Include="Assets\Scripts\RotateMe.cs" />
+     <Compile Include="Assets\Scripts\SmoothFollow.cs" />
+     <Compile Include="Assets\Scripts\StartPosition.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
+     <Compile Include="Assets\Scripts\enemyAI.cs" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\RenderBehind.shader" />
+     <None Include="Assets\Cha_Data\Shader\WrapLambert.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-GUI.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-DiffuseMod.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-Tinted.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -126,14 +117,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+  
 </Project>
