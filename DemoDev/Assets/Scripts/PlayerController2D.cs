@@ -10,7 +10,7 @@ public class PlayerController2D : MonoBehaviour {
 
     private Rigidbody rbody;
    
-    public float dashAmount = 120.0f;
+    public float dashAmount = 10.0f;
     public float dashDamping = 2.0f;
     private int dashCount = 0;
     private float dashCooldown = 0f;
