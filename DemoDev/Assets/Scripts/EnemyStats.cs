@@ -4,11 +4,13 @@ public class EnemyStats : MonoBehaviour {
 
   public float curHp;
   public float maxHp;
+    public float damage;
 
   // Use this for initialization
   void Start() {
     curHp = 100;
     maxHp = 100;
+    damage = 10;
   }
 
   // Update is called once per frame
@@ -24,4 +26,16 @@ public class EnemyStats : MonoBehaviour {
     print("damage done = " + dmg);
     print("enemy hp = " + curHp);
   }
+
+  public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Weapon")
+        {
+            this.curHp -= other.GetComponent<EnemyStats>().damage;
+        }
+        if(curHp < 1.0f)
+        {
+            DestroyObject(this);
+        }
+    }
 }

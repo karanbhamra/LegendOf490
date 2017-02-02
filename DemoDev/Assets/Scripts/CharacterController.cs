@@ -18,6 +18,9 @@ public class CharacterController : MonoBehaviour {
   public float tiltAngleY;
   public float damage = 20.0f;
 
+  public float health;
+  public float maxHealth;
+
   bool upPressed;
   bool downPressed;
   bool rightPressed;
@@ -36,6 +39,7 @@ public class CharacterController : MonoBehaviour {
   void Start() {
     this.animator = GetComponent<Animator>() as Animator;
     moveDirection = Vector3.zero;
+    health = 100.0f;
   }
 
   // Update is called once per frame
@@ -106,7 +110,7 @@ public class CharacterController : MonoBehaviour {
     enemy = GameObject.FindWithTag("enemy");
     EnemyStats stats = enemy.GetComponent<EnemyStats>();
     //stats.ReceiveDamage(damage);
-    DestroyObject(enemy);
+    //DestroyObject(enemy);
   }
 
     void basicDash()
@@ -189,6 +193,18 @@ public class CharacterController : MonoBehaviour {
         else
         {
             dashCooldown = 0;
+        }
+    }
+
+   public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "enemy" || other.tag == "Weapon")
+        {
+            this.health -= other.GetComponent<EnemyStats>().damage;
+        }
+        if(this.health < 1.0f)
+        {
+            die = true;
         }
     }
 }
