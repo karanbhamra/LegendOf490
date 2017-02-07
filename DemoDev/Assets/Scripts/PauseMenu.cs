@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 	public bool paused = false;
 	private string saveGameName = "";
 	public string testSaveData = "";
+	public Vector3 playerPos;
 
 	private void Start()
 	{
@@ -47,8 +48,11 @@ public class PauseMenu : MonoBehaviour
 			{
 				//print ("save functionality not yet implemented");
 				SaveData newGameSave = new SaveData();
-				saveGameName = SceneManager.GetActiveScene().ToString();
+				saveGameName = "TestSave01";//SceneManager.GetActiveScene().ToString();
 				newGameSave.saveGameName = saveGameName;
+				newGameSave.playerPositionX = GameObject.FindGameObjectWithTag("Player").transform.position.x;
+				newGameSave.playerPositionY = GameObject.FindGameObjectWithTag("Player").transform.position.y;
+				newGameSave.playerPositionZ = GameObject.FindGameObjectWithTag("Player").transform.position.z;
 				newGameSave.testData = "testing"; // will include player coords when up and working
 				SaveLoad.GameSave(newGameSave);
 
@@ -62,6 +66,11 @@ public class PauseMenu : MonoBehaviour
 				SaveData loadedGame = SaveLoad.GameLoad(saveGameName);
 				if (loadedGame != null)
 				{
+					playerPos.x = loadedGame.playerPositionX;
+					playerPos.y = loadedGame.playerPositionY;
+					playerPos.z = loadedGame.playerPositionZ;
+
+					GameObject.FindGameObjectWithTag("Player").transform.position = playerPos;
 					testSaveData = loadedGame.testData;
 				}
 			}

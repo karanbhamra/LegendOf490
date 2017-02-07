@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class SaveData : MonoBehaviour
+public class SaveData
 {
 
 	public string saveGameName; // filename
-	public string testData; // data we need to serialize
 
-	// Use this for initialization
-	void Start()
-	{
+	// data we need to serialize
+	public float playerPositionX; // player pos
+	public float playerPositionY; // player pos
+	public float playerPositionZ; // player pos
+	public string testData; // just to test for now
 
-	}
 
-	// Update is called once per frame
-	void Update()
-	{
-
-	}
 }

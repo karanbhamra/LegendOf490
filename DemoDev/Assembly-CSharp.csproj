@@ -81,6 +81,8 @@
      <Compile Include="Assets\Scripts\PlayerAgent.cs" />
      <Compile Include="Assets\Scripts\PlayerController2D.cs" />
      <Compile Include="Assets\Scripts\RotateMe.cs" />
+     <Compile Include="Assets\Scripts\SaveData.cs" />
+     <Compile Include="Assets\Scripts\SaveLoad.cs" />
      <Compile Include="Assets\Scripts\SmoothFollow.cs" />
      <Compile Include="Assets\Scripts\StartPosition.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
@@ -91,9 +93,6 @@
      <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-GUI.shader" />
      <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-DiffuseMod.shader" />
      <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-Tinted.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -108,9 +107,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

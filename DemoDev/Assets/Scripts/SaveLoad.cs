@@ -4,7 +4,8 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class SaveLoad : MonoBehaviour
+[System.Serializable]
+public class SaveLoad
 {
 
 
@@ -12,7 +13,7 @@ public class SaveLoad : MonoBehaviour
 	{
 
 		BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Create(Application.dataPath + saveGame.testData + ".sav");
+		FileStream file = File.Create(Application.dataPath + saveGame.saveGameName + ".sav");
 		bf.Serialize(file, saveGame);
 		file.Close();
 		Debug.Log("Saved Game: " + saveGame.testData);
