@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
 	private void Start()
 	{
 		Time.timeScale = 1; //Set the timeScale back to 1 for Restart option to work
+		saveGameName = SceneManager.GetActiveScene().name;  // get scene name for filename
 	}
 
 	private void Update()
@@ -44,24 +45,26 @@ public class PauseMenu : MonoBehaviour
 				paused = false;
 			}
 
+			// game save
 			if (GUI.Button(new Rect(Screen.width / 4 + 10, Screen.height / 4 + 2 * Screen.height / 10 + 10, Screen.width / 2 - 20, Screen.height / 10), "SAVE GAME"))
 			{
-				//print ("save functionality not yet implemented");
 				SaveData newGameSave = new SaveData();
-				saveGameName = "TestSave01";//SceneManager.GetActiveScene().ToString();
+				//saveGameName = SceneManager.GetActiveScene().name;  // get scene name for filename
 				newGameSave.saveGameName = saveGameName;
-				newGameSave.playerPositionX = GameObject.FindGameObjectWithTag("Player").transform.position.x;
-				newGameSave.playerPositionY = GameObject.FindGameObjectWithTag("Player").transform.position.y;
-				newGameSave.playerPositionZ = GameObject.FindGameObjectWithTag("Player").transform.position.z;
+				// player xyz coords
+				Vector3 playerCoords = GameObject.FindGameObjectWithTag("Player").transform.position;
+				newGameSave.playerPositionX = playerCoords.x;
+				newGameSave.playerPositionY = playerCoords.y;
+				newGameSave.playerPositionZ = playerCoords.z;
 				newGameSave.testData = "testing"; // will include player coords when up and working
 				SaveLoad.GameSave(newGameSave);
 
 
 			}
 
+			// game load
 			if (GUI.Button(new Rect(Screen.width / 4 + 10, Screen.height / 4 + 3 * Screen.height / 10 + 10, Screen.width / 2 - 20, Screen.height / 10), "LOAD GAME"))
 			{
-				//print ("load functionality not yet implemented");
 
 				SaveData loadedGame = SaveLoad.GameLoad(saveGameName);
 				if (loadedGame != null)
