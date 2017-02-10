@@ -28,11 +28,16 @@ public class MainMenu : MonoBehaviour
 			Debug.Log (save.ToString ());
 			if (save.Contains ("Prologue"))
 			{
-				//SaveData loadedGame = SaveLoad.GameLoad ("Prologue");
+				SaveData loadedGame = SaveLoad.GameLoad ("Prologue");
+
+				PlayerPrefs.SetString ("newgame", "false");
+				PlayerPrefs.SetFloat ("PlayerX", loadedGame.playerPositionX);
+				PlayerPrefs.SetFloat ("PlayerY", loadedGame.playerPositionY);
+				PlayerPrefs.SetFloat ("PlayerZ", loadedGame.playerPositionZ);
 				SceneManager.LoadScene ("Prologue");
 				Debug.Log ("Loaded LATEST SAVE");
 
-				SaveData loadedGame = SaveLoad.GameLoad ("Prologue");
+				//SaveData loadedGame = SaveLoad.GameLoad ("Prologue");
 			}
 		}
 
@@ -44,6 +49,7 @@ public class MainMenu : MonoBehaviour
 
 	{
 		Debug.Log("Prologue loaded");
+		PlayerPrefs.SetString ("newgame", "true");
 		SceneManager.LoadScene("Prologue"); //this will load our first level from our build settings. "1" is the second scene in our game
 
 
