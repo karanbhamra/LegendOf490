@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{06554A2D-A64C-53C9-880E-D66036E99B57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;CROSS_PLATFORM_INPUT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\AntialiasingEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\CullingFadeControl\Editor\vCullingFadeControlEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\Editor\v3rdPersonCameraEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\Editor\vLockOnTargetControlEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\Editor\vScriptableObjectUtility.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\Editor\vCharacterEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\Editor\vGameControllerEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\Editor\vGenericInputDrawer.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\Editor\vMoveSetSpeedEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\Editor\vThirdPersonInputEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterCreator\Script\Editor\vCreateBasicCharacterEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterCreator\Script\Editor\vHelperEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterCreator\Script\Editor\vLayerManager.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\Editor\vFootStepEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\Editor\vDynamicTriggerActionEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\Editor\vHitDamageParticleEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\HeadTrack\Editor\vHeadTrackEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\HeadTrack\Editor\vLookTargetEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\ObjectDamage\Editor\vObjectDamageEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Ragdoll\Editor\vRagdollBuilder.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Ragdoll\Editor\vRagdollEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\Editor\vAIWeaponsControlEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\Editor\vCreateNPCEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\Editor\v_AIEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterController\Editor\vCreateMeleeCharacterEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\Editor\vButtonDrawer.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\Editor\vItemCollectionEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\Editor\vItemEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\Editor\vItemListDataEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\Editor\vItemManagerEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\Editor\vWeaponHolderEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\Editor\vWeaponHolderManagerEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\Editor\EnumFlagDrawer.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\Editor\vCreateMeleeWeaponEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\Editor\vDamageDrawer.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\Editor\vMeleeAttackControlEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\Editor\vMeleeAttackObjectEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\Editor\vMeleeManagerEditor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\WaypointSystem\Editor\vWaypointAreaEditor.cs" />
+     <None Include="Assets\Invector-3rdPersonController\Melee Combat\README_Melee.txt" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\RenderBehind.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Melee Combat\Animator\Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\Cha_Data\Shader\WrapLambert.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\XInput\Plugins\MITLicense.txt" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-GUI.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-DiffuseMod.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-Tinted.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Basic Locomotion\README_Basic.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Melee Combat\3DModels\Other\Wires\Shaders\alpha_2sided.shader" />
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>/Users/karan/LegendOf490/DemoDev/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.EditorTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/Editor/UnityEditor.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="XInputDotNetPure">
+ <HintPath>/Users/karan/LegendOf490/DemoDev/Assets/Invector-3rdPersonController/Basic Locomotion/Scripts/XInput/Plugins/x86/XInputDotNetPure.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.OSXStandalone.Extensions">
+ <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{E2BC14E1-0A76-0A29-9578-CFD6C874C2F7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{0375FA38-8A71-8A72-0888-45BB31ABC994}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

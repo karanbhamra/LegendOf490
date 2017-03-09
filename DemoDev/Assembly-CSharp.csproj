@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;CROSS_PLATFORM_INPUT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -46,54 +46,150 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ActiveInventoryItemUI.cs" />
-     <Compile Include="Assets\Scripts\ActiveSpecialItemUI.cs" />
-     <Compile Include="Assets\Scripts\AudioController.cs" />
-     <Compile Include="Assets\Scripts\BaseCharacter.cs" />
-     <Compile Include="Assets\Scripts\BaseItem.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\3D Models\Others\HealthItem\vAnimateUV.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\HUD\topDownCursor\TopDownCursor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\CullingFadeControl\vCullingFadeControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\LockOn\vLockOnTarget.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\LockOn\vLockOnTargetControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\v3rdPersonCamera.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\v3rdPersonCameraListData.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\v3rdPersonCameraState.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vCharacter.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vGameController.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vHUDController.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vIDamageReceiver.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vInput.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vMoveSetSpeed.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vOnDeadTrigger.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vThirdPersonAnimator.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vThirdPersonController.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vThirdPersonInput.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vThirdPersonMotor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vAudioSurface.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vAudioSurfaceControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vFisherYatesRandom.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vFootPlantingPlayer.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vFootStepFromTexture.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vFootStepHandler.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vFootStepTrigger.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\FootStep\vInstantiateStepMark.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vBoxTrigger.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vChangeScenes.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vCharacterStandalone.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vComment.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vDestroyGameObject.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vDraggableBox.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vDynamicTriggerAction.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vExtensions.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vFindSpawnPoint.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vHealthItem.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vHitDamageParticle.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vLoadLevel.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vMinMaxRangeAttribute.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPendulum.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPickupItem.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPlatform.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPlayRandomClip.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPunchingBag.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vRotateObject.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vSimpleDoor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vSliderSizeControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vTriggerAction.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vTriggerChangeCameraState.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vTriggerLadderAction.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vTriggerSoundByState.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\v_SpriteHealth.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\HeadTrack\Scripts\vHeadTrack.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\HeadTrack\Scripts\vHeadTrackSensor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\HeadTrack\Scripts\vLookTarget.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\ObjectDamage\vObjectDamage.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\ObjectDamage\vSpike\vSpike.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\ObjectDamage\vSpike\vSpikeControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Ragdoll\vCollisionMessage.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Ragdoll\vRagdoll.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Ragdoll\vRagdollCollision.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\3DModels\Other\Vases\Script\vBreakableObject.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\3DModels\Other\Vases\Script\vDestroyOnSleep.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\v_AIAnimator.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\v_AICompanion.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\v_AIController.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\v_AIMotor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\v_AISphereSensor.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterAI\v_AIWeaponsControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\CharacterController\vMeleeCombatInput.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\AutoScrollVertical.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\InventoryWindow.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\SetFirstSelectable.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vButtonAttribute.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vChangeInputTypeTrigger.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vEquipArea.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vEquipAreaControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vEquipProperties.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vEquipSlot.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vEquipmentDisplay.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vGridLayoutExpand.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vIEquipment.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vInventory.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItem.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemAmountWindow.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemAttribute.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemAttributes.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemAttributesManager.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemCollection.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemEnums.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemListData.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemManager.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemManagerEvents.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemOptionWindow.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemSlot.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemWindow.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vItemWindowDisplay.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vWeaponHolder.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vWeaponHolderManager.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\ItemManager\Scripts\vWindowPop_up.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\EnumFlagAttribute.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\vHitBox.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\vHitEffects.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\vIMeleeFighter.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\vMeleeAttackControl.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\vMeleeAttackObject.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\vMeleeManager.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\MeleeWeapon\vMeleeWeapon.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\WaypointSystem\vPoint.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\WaypointSystem\vWaypoint.cs" />
+     <Compile Include="Assets\Invector-3rdPersonController\Melee Combat\Scripts\WaypointSystem\vWaypointArea.cs" />
      <Compile Include="Assets\Scripts\CameraController2D.cs" />
-     <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CharacterController.cs" />
-     <Compile Include="Assets\Scripts\CharacterCustomization.cs" />
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
      <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
      <Compile Include="Assets\Scripts\EnemyStats.cs" />
-     <Compile Include="Assets\Scripts\GameLoader.cs" />
-     <Compile Include="Assets\Scripts\GameMaster.cs" />
-     <Compile Include="Assets\Scripts\HUDElementsUI.cs" />
-     <Compile Include="Assets\Scripts\IKHandle.cs" />
      <Compile Include="Assets\Scripts\InfoDisplay.cs" />
-     <Compile Include="Assets\Scripts\InventoryItem.cs" />
-     <Compile Include="Assets\Scripts\InventoryItemAgent.cs" />
-     <Compile Include="Assets\Scripts\InventoryItemUI.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem.cs" />
-     <Compile Include="Assets\Scripts\LevelController.cs" />
-     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MainMenuChase.cs" />
-     <Compile Include="Assets\Scripts\NPC.cs" />
-     <Compile Include="Assets\Scripts\NPCStatUI.cs" />
-     <Compile Include="Assets\Scripts\NPC_Agent.cs" />
-     <Compile Include="Assets\Scripts\NPC_Movement.cs" />
-     <Compile Include="Assets\Scripts\NPC_Sight.cs" />
-     <Compile Include="Assets\Scripts\NavMeshMovePlayer.cs" />
-     <Compile Include="Assets\Scripts\PC.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\Scripts\PlayerAgent.cs" />
      <Compile Include="Assets\Scripts\PlayerController2D.cs" />
-     <Compile Include="Assets\Scripts\RotateMe.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />
      <Compile Include="Assets\Scripts\SaveLoad.cs" />
      <Compile Include="Assets\Scripts\SmoothFollow.cs" />
-     <Compile Include="Assets\Scripts\StartPosition.cs" />
-     <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\enemyAI.cs" />
      <Compile Include="Assets\wepDmg.cs" />
+     <None Include="Assets\Invector-3rdPersonController\Melee Combat\README_Melee.txt" />
      <None Include="Assets\Pokemon Assets\Materials\Shaders\RenderBehind.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Melee Combat\Animator\Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Cha_Data\Shader\WrapLambert.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\XInput\Plugins\MITLicense.txt" />
      <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-GUI.shader" />
      <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-DiffuseMod.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Pokemon Assets\Materials\Shaders\Sprites-Tinted.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Basic Locomotion\README_Basic.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Invector-3rdPersonController\Melee Combat\3DModels\Other\Wires\Shaders\alpha_2sided.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -112,6 +208,13 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
+ <Reference Include="XInputDotNetPure">
+ <HintPath>/Users/karan/LegendOf490/DemoDev/Assets/Invector-3rdPersonController/Basic Locomotion/Scripts/XInput/Plugins/x86/XInputDotNetPure.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{E2BC14E1-0A76-0A29-9578-CFD6C874C2F7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
