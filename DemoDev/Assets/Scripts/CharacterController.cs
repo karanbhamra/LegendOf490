@@ -90,7 +90,7 @@ public class CharacterController : MonoBehaviour {
     basicDash();
     // The Inputs are defined in the Input Manager
     if(h != 0.0f || v != 0.0f) {
-      speed += 0.2f;
+			speed += 1.0f;//0.2f;
     }else {
       speed = 0.0f;
     }

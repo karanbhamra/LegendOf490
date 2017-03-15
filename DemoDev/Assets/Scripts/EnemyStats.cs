@@ -31,7 +31,7 @@ public class EnemyStats : MonoBehaviour {
     {
         if (other.tag == "Weapon")
         {
-            this.curHp -= other.GetComponent<EnemyStats>().damage; // this is throwing a nullpointerexception
+//            this.curHp -= other.GetComponent<EnemyStats>().damage; // this is throwing a nullpointerexception
         }
         if(curHp < 1.0f)
         {
