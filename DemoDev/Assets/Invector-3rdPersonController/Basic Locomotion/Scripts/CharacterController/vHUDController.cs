@@ -243,14 +243,16 @@ public class vHUDController : MonoBehaviour
     
     void ChangeInputDisplay()
 	{
-		#if MOBILE_INPUT
+        /* 
+		//if MOBILE_INPUT
 		displayControls.enabled = false;
-		#else
+		//else
 		if(controllerInput)		
 			displayControls.sprite = joystickControls;		
 		else		
 			displayControls.sprite = keyboardControls;
 		#endif
+        */
 	}
     
     void InitFadeText()
