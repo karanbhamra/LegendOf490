@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ZoneLoader : MonoBehaviour {
 
@@ -18,11 +19,18 @@ public class ZoneLoader : MonoBehaviour {
 	/// OnTriggerEnter is called when the Collider other enters the trigger.
 	/// </summary>
 	/// <param name="other">The other Collider involved in this collision.</param>
-	void OnTriggerEnter(Collider other)
+	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.tag == "Player")
 		{
 			print("Player is in loading zone.");
+
+			if (Input.GetKeyDown(KeyCode.E))
+			{
+				print("Loading next level now...");
+				SceneManager.LoadScene("Village");
+				
+			}
 		}
 		
 	}
