@@ -21,17 +21,21 @@ public class ZoneLoader : MonoBehaviour {
 	/// <param name="other">The other Collider involved in this collision.</param>
 	void OnTriggerStay(Collider other)
 	{
-		if (other.gameObject.tag == "Player")
+		if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
 		{
 			print("Player is in loading zone.");
+            print("Loading next level now...");
+            SceneManager.LoadScene("Village");
 
+            /*
 			if (Input.GetKeyDown(KeyCode.E))
 			{
 				print("Loading next level now...");
 				SceneManager.LoadScene("Village");
 				
 			}
-		}
+            */
+        }
 		
 	}
 }

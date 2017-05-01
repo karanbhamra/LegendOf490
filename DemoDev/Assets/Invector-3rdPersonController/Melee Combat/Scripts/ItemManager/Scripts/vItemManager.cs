@@ -124,7 +124,7 @@ namespace Invector.ItemManager
                     if (animator)
                     {
                         var parent = animator.GetBoneTransform(HumanBodyBones.LeftHand);
-                        var defaultPoint = parent.FindChild("defaultEquipPoint");
+                        var defaultPoint = parent.Find("defaultEquipPoint");
 	                    
 	                    if (defaultPoint) 
 		                    equipPointL.defaultPoint = defaultPoint;
@@ -193,7 +193,7 @@ namespace Invector.ItemManager
                     if (animator)
                     {
                         var parent = animator.GetBoneTransform(HumanBodyBones.RightHand);
-                        var defaultPoint = parent.FindChild("defaultEquipPoint");
+                        var defaultPoint = parent.Find("defaultEquipPoint");
                         if (defaultPoint) equipPointR.defaultPoint = defaultPoint;
                         else
                         {
