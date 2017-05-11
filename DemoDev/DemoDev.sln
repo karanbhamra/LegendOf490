@@ -1,11 +1,11 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDev", "Assembly-CSharp-firstpass.csproj", "{E2BC14E1-0A76-0A29-9578-CFD6C874C2F7}"
+# Visual Studio 2008
+
+Project("{D0F92279-EB86-37A2-F595-3AC240127937}") = "DemoDev", "Assembly-CSharp-firstpass.csproj", "{E2BC14E1-0A76-0A29-9578-CFD6C874C2F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDev", "Assembly-CSharp.csproj", "{0375FA38-8A71-8A72-0888-45BB31ABC994}"
+Project("{D0F92279-EB86-37A2-F595-3AC240127937}") = "DemoDev", "Assembly-CSharp.csproj", "{0375FA38-8A71-8A72-0888-45BB31ABC994}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDev", "Assembly-CSharp-Editor.csproj", "{06554A2D-A64C-53C9-880E-D66036E99B57}"
+Project("{D0F92279-EB86-37A2-F595-3AC240127937}") = "DemoDev", "Assembly-CSharp-Editor.csproj", "{06554A2D-A64C-53C9-880E-D66036E99B57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
