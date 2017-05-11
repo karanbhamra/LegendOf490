@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio for Mac
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDev.Plugins", "DemoDev.Plugins.csproj", "{3DCFD959-F711-D517-6432-B79C42FAE8C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDev", "DemoDev.csproj", "{48BCE173-E672-CF76-A3B3-FA2FB2E3B4AB}"

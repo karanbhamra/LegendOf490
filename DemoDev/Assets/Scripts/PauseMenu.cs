@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+
 public class PauseMenu : MonoBehaviour
 {
 	public string levelToLoad;
@@ -11,20 +12,22 @@ public class PauseMenu : MonoBehaviour
 	public string testSaveData = "";
 	public Vector3 playerPos;
 
+
 	private void Start()
 	{
 		Time.timeScale = 1; //Set the timeScale back to 1 for Restart option to work
 		saveGameName = SceneManager.GetActiveScene().name;  // get scene name for filename
 
-		if (PlayerPrefs.HasKey ("newgame") && PlayerPrefs.GetString ("newgame") == "false")
+		if (PlayerPrefs.HasKey("newgame") && PlayerPrefs.GetString("newgame") == "false")
 		{
-			PositionUpdate ();
-			
+			PositionUpdate();
+
 		}
-		else{
-			PlayerPrefs.SetFloat ("PlayerX", -20);
-			PlayerPrefs.SetFloat ("PlayerY", 0);
-			PlayerPrefs.SetFloat ("PlayerZ", -89);
+		else
+		{
+			PlayerPrefs.SetFloat("PlayerX", -20);
+			PlayerPrefs.SetFloat("PlayerY", 0);
+			PlayerPrefs.SetFloat("PlayerZ", -89);
 		}
 	}
 
@@ -33,9 +36,9 @@ public class PauseMenu : MonoBehaviour
 		SaveData loadedGame = SaveLoad.GameLoad(saveGameName);
 		if (loadedGame != null)
 		{
-			playerPos.x = PlayerPrefs.GetFloat ("PlayerX");//loadedGame.playerPositionX;
-			playerPos.y = PlayerPrefs.GetFloat ("PlayerY");//loadedGame.playerPositionY;
-			playerPos.z = PlayerPrefs.GetFloat ("PlayerZ");//loadedGame.playerPositionZ;
+			playerPos.x = PlayerPrefs.GetFloat("PlayerX");//loadedGame.playerPositionX;
+			playerPos.y = PlayerPrefs.GetFloat("PlayerY");//loadedGame.playerPositionY;
+			playerPos.z = PlayerPrefs.GetFloat("PlayerZ");//loadedGame.playerPositionZ;
 
 			GameObject.FindGameObjectWithTag("Player").transform.position = playerPos;
 			testSaveData = loadedGame.testData;
@@ -45,7 +48,8 @@ public class PauseMenu : MonoBehaviour
 	private void Update()
 	{
 
-		if (Input.GetKeyDown(KeyCode.Escape)) //check if Escape key/Back key is pressed
+		//if (Input.GetKeyDown(KeyCode.Escape)) //check if Escape key/Back key is pressed
+		if (Input.GetKeyDown(KeyCode.M))
 		{
 			if (paused)
 				paused = false;  //unpause the game if already paused
@@ -91,20 +95,20 @@ public class PauseMenu : MonoBehaviour
 			if (GUI.Button(new Rect(Screen.width / 4 + 10, Screen.height / 4 + 3 * Screen.height / 10 + 10, Screen.width / 2 - 20, Screen.height / 10), "LOAD GAME"))
 			{
 
-//				SaveData loadedGame = SaveLoad.GameLoad(saveGameName);
-//				if (loadedGame != null)
-//				{
-//					playerPos.x = loadedGame.playerPositionX;
-//					playerPos.y = loadedGame.playerPositionY;
-//					playerPos.z = loadedGame.playerPositionZ;
-//
-//					GameObject.FindGameObjectWithTag("Player").transform.position = playerPos;
-//					testSaveData = loadedGame.testData;
-//				}
-				PositionUpdate ();
-				playerPos.x = PlayerPrefs.GetFloat ("PlayerX");//loadedGame.playerPositionX;
-				playerPos.y = PlayerPrefs.GetFloat ("PlayerY");//loadedGame.playerPositionY;
-				playerPos.z = PlayerPrefs.GetFloat ("PlayerZ");//loadedGame.playerPositionZ;
+				//				SaveData loadedGame = SaveLoad.GameLoad(saveGameName);
+				//				if (loadedGame != null)
+				//				{
+				//					playerPos.x = loadedGame.playerPositionX;
+				//					playerPos.y = loadedGame.playerPositionY;
+				//					playerPos.z = loadedGame.playerPositionZ;
+				//
+				//					GameObject.FindGameObjectWithTag("Player").transform.position = playerPos;
+				//					testSaveData = loadedGame.testData;
+				//				}
+				PositionUpdate();
+				playerPos.x = PlayerPrefs.GetFloat("PlayerX");//loadedGame.playerPositionX;
+				playerPos.y = PlayerPrefs.GetFloat("PlayerY");//loadedGame.playerPositionY;
+				playerPos.z = PlayerPrefs.GetFloat("PlayerZ");//loadedGame.playerPositionZ;
 			}
 
 			if (GUI.Button(new Rect(Screen.width / 4 + 10, Screen.height / 4 + 4 * Screen.height / 10 + 10, Screen.width / 2 - 20, Screen.height / 10), "RESTART"))

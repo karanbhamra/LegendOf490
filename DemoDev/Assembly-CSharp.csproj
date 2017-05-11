@@ -217,6 +217,7 @@
  <Reference Include="XInputDotNetPure">
  <HintPath>/Users/karan/LegendOf490/DemoDev/Assets/Invector-3rdPersonController/Basic Locomotion/Scripts/XInput/Plugins/x86/XInputDotNetPure.dll</HintPath>
  </Reference>
+ <Compile Include="Assets\Scripts\FootSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
